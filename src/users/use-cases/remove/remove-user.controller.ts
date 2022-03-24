@@ -1,9 +1,9 @@
 import { Controller, Param, Delete } from '@nestjs/common';
-import { UsersService } from './users.service';
+import { RemoveUserService } from './remove-user.service';
 
 @Controller('users')
-export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+export class RemoveUserController {
+  constructor(private readonly usersService: RemoveUserService) {}
 
   @Delete(':id')
   remove(@Param('id') id: string) {

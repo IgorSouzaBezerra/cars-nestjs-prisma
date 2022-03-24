@@ -5,10 +5,6 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class UsersService {
   constructor(private readonly prisma: PrismaService) {}
 
-  async findAll() {
-    return this.prisma.users.findMany();
-  }
-
   async remove(id: string) {
     const user = await this.findById(id);
 

@@ -9,10 +9,6 @@ export class UsersService {
     return this.prisma.users.findMany();
   }
 
-  async findOne(id: string) {
-    return this.findById(id);
-  }
-
   async remove(id: string) {
     const user = await this.findById(id);
 

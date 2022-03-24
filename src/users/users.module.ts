@@ -7,12 +7,20 @@ import { UserUtils } from './utils/user-utils';
 import { CreateUserService } from './use-cases/create/create-user.service';
 import { UpdateUserController } from './use-cases/update/update-user.controller';
 import { UpdateUserService } from './use-cases/update/update-user.service';
+import { ListUserController } from './use-cases/list-one/list-user.controller';
+import { ListUserService } from './use-cases/list-one/list-user.service';
 
 @Module({
-  controllers: [CreateUserController, UpdateUserController, UsersController],
+  controllers: [
+    CreateUserController,
+    UpdateUserController,
+    ListUserController,
+    UsersController,
+  ],
   providers: [
     CreateUserService,
     UpdateUserService,
+    ListUserService,
     UsersService,
     PrismaService,
     UserUtils,
